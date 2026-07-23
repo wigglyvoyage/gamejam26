@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://c64cr4tg6ooag"]
+
+[ext_resource type="Script" uid="uid://dolhnux1motvo" path="res://player.gd" id="1_wtcfe"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_shqcg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yh4yq"]
+size = Vector2(43, 109)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_shqcg"]
+size = Vector2(1284, 55)
+
+[node name="Node2D" type="Node2D" unique_id=551844784]
+
+[node name="player" type="CharacterBody2D" parent="." unique_id=656898074]
+up_direction = Vector2(0.0049999375, 0.9999875)
+script = ExtResource("1_wtcfe")
+
+[node name="Sprite2D" type="Sprite2D" parent="player" unique_id=793099264]
+position = Vector2(11.499999, -44.499996)
+scale = Vector2(45, 113.00001)
+texture = SubResource("CanvasTexture_shqcg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=377104612]
+position = Vector2(11.5, -44.5)
+shape = SubResource("RectangleShape2D_yh4yq")
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=1173529267]
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=523096756]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=57294881]
+position = Vector2(-49, 40.5)
+shape = SubResource("RectangleShape2D_shqcg")
+
+[node name="ColorRect" type="ColorRect" parent="Ground" unique_id=1324207204]
+offset_left = -702.0
+offset_top = 11.0
+offset_right = 608.0
+offset_bottom = 78.0
