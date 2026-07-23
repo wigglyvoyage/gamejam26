@@ -17,23 +17,26 @@ up_direction = Vector2(0.0049999375, 0.9999875)
 script = ExtResource("1_wtcfe")
 
 [node name="Sprite2D" type="Sprite2D" parent="player" unique_id=793099264]
+visible = false
 position = Vector2(11.499999, -44.499996)
 scale = Vector2(45, 113.00001)
 texture = SubResource("CanvasTexture_shqcg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=377104612]
-position = Vector2(11.5, -44.5)
+position = Vector2(12, -42)
 shape = SubResource("RectangleShape2D_yh4yq")
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1173529267]
 
 [node name="Ground" type="StaticBody2D" parent="." unique_id=523096756]
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=57294881]
 position = Vector2(-49, 40.5)
 shape = SubResource("RectangleShape2D_shqcg")
 
 [node name="ColorRect" type="ColorRect" parent="Ground" unique_id=1324207204]
+visible = false
 offset_left = -702.0
 offset_top = 11.0
 offset_right = 608.0
